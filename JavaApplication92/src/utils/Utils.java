@@ -20,42 +20,7 @@ import javax.swing.JOptionPane;
 
 public class Utils {
 
-    //converter String para data
-    public static Date converterStringToDate(String texto) {
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-
-        Date data = null;
-
-        try {
-            // Converte a variavel String para Date  com base no formato definido
-            data = formato.parse(texto);
-        } catch (ParseException ex) {
-
-            JOptionPane.showMessageDialog(null, "erro a oconverter a data");
-        }
-        return data;
-
-    }
-
-    //converter data para String
-    public static String converterDateToString(Date data) {
-
-        // Define o formato desejado para a data
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-
-        String dateString = "muito legal";
-
-        try {
-            // Converte a variavel Date para String com base no formato definido
-            dateString = formato.format(data);
-        } catch (Exception e) {
-
-            JOptionPane.showMessageDialog(null, "Erro ao formatar a data");
-
-        }
-        // Exibe a data formatada
-        return dateString;
-    }
+  
 
     public static String calcularHash(String senha) {
         String hashSHA1 = "";
