@@ -98,7 +98,7 @@ public class UsuarioController {
 //lista todos os usuarios da DataBase
 
     public Usuario buscaPk(int id) {
-        String sql = "SELECT pkusuario, nome, email, senha, datanasc, ativo , image from tbusuario where pkusuario = ?";
+        String sql = "SELECT pkusuario, nome, email, senha, ativo , image from tbusuario where pkusuario = ?";
 
         GerenciadorConexao gerenciador = new GerenciadorConexao();
         PreparedStatement comando = null;

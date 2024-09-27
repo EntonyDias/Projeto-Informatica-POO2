@@ -5,6 +5,7 @@
  */
 package views;
 
+import controller.PedidoController;
 import controller.UsuarioController;
 import java.net.URL;
 
@@ -12,6 +13,7 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import model.Pedido;
 import model.Usuario;
 import utils.Utils;
 
@@ -84,23 +86,23 @@ public class FrCarrinho extends javax.swing.JDialog {
         grdUsuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         grdUsuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "codigo"
+                "codigo", "codigo Produto", "produto", "valor"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class
             };
             boolean[] canEdit = new boolean [] {
-                false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -251,27 +253,7 @@ public class FrCarrinho extends javax.swing.JDialog {
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-/*
-//pega o usuario que esta selecionado e se for diferente de -1 (-1 e igual  nada selecionado)
-        if (grdUsuario.getSelectedRow() != -1) {
 
-            //armazena a possicao selecionada
-            int possicao = grdUsuario.getSelectedRow();
-
-//ele vai pegar o valor do atributo da  coluna 0 da tabela (o id no caso) na  linha selecionada e transformando ela em string 
-            String id = grdUsuario.getValueAt(possicao, 0).toString();
-//                                                       linha / coluna
-
-            String nome = grdUsuario.getValueAt(possicao, 1).toString();
-            int pkusuario = Integer.parseInt(id);
-
-            UsuarioController controller = new UsuarioController();
-
-            if (controller.deletarPedido(pkusuario)) {
-                JOptionPane.showMessageDialog(null, "o usuario " + nome + " foi excluido");
-            }
-            pesquisar();
-        }*/
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -283,33 +265,32 @@ public class FrCarrinho extends javax.swing.JDialog {
         new FrMain().setVisible(true);
     }//GEN-LAST:event_jButton2MouseClicked
     private void pesquisar() {
-/*
+
 //pega o modelo da grade com suas colunas
         DefaultTableModel modelo = (DefaultTableModel) grdUsuario.getModel();
 //cooloca 
         modelo.setNumRows(0);
 
-        UsuarioController controller = new UsuarioController();
+        PedidoController controller = new PedidoController();
 
        
      
-
+listarPedidos()=
         //loop para adicionar todos os usuarios encontrados
-      /*  for (Usuario usu : listaUsuarios) {
+       for (Pedido ped : listaPedidos) {
 
             Object[] linha = {
-                usu.getPkusuario(),
-                usu.getNome(),
-                usu.getEmail(),
-                
-                usu.ativoToString()
+                ped.getPkpedido(),
+                ped.getFkproduto(),
+
             };
+                    }
             //coloca o Array com os atributos do usuario na lista
-            modelo.addRow(linha);*/
+           modelo.addRow(linha);
         
 
+    
     }
-
     /**
      * @param args the command line arguments
      */
