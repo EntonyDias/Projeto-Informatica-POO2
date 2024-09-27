@@ -27,7 +27,7 @@ public class Pedido {
     public int getPkpedido() {
         return pkpedido;
     }
-
+    
     public void setPkpedido(int pkpedido) {
         this.pkpedido = pkpedido;
     }
@@ -47,6 +47,4 @@ public class Pedido {
     public void setFkproduto(int fkproduto) {
         this.fkproduto = fkproduto;
     }
-    
-
 }

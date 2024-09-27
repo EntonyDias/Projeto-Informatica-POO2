@@ -63,7 +63,7 @@ public class UsuarioController {
 
     public boolean criarUsuario(Usuario usu) {
         //comando do sql
-        String Sql = "insert into tbusuario (nome,email,senha,ativo,image)value(?,?,?,?,?,?)";
+        String Sql = "insert into tbusuario (nome,email,senha,ativo,image)value(?,?,?,?,?)";
 
         GerenciadorConexao gerenciador = new GerenciadorConexao();
         PreparedStatement comando = null;
@@ -79,8 +79,8 @@ public class UsuarioController {
             comando.setString(1, usu.getNome());
             comando.setString(2, usu.getEmail());
             comando.setString(3, usu.getSenha());
-            comando.setBoolean(5, usu.isAtivo());
-            comando.setBytes(6, iconBytes);
+            comando.setBoolean(4, usu.isAtivo());
+            comando.setBytes(5, iconBytes);
 
             //vai executar o comando sql
             comando.executeUpdate();
@@ -116,7 +116,6 @@ public class UsuarioController {
                 usu.setNome(resultado.getString("nome"));
                 usu.setEmail(resultado.getString("email"));
                 usu.setSenha(resultado.getString("senha"));
-                usu.setDataNasc(resultado.getDate("dataNasc"));
                 usu.setAtivo(resultado.getBoolean("ativo"));
 
                 byte[] bytes = resultado.getBytes("image");

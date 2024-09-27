@@ -35,24 +35,21 @@ public class PedidoController {
             comando = gerenciador.prepararComando(sql);
 
             //atribuindo coisas nas variaveis
-            
 
-           
 //isso vai executar o comando e guardar na variavel resultado
             resultado = comando.executeQuery();
             //resultado.next() vai passar para a proxima linha no resultado do sql e ele tambem retorna true se tiver outra linha para ser passada e false se nao tiver
             while (resultado.next()) {
 
-                //cria um pedario para preche-lo
+                //cria um pedidopara preche-lo
                 Pedido ped = new Pedido();
 
 //adicionando os atributos para o pedario
-               /* ped.setPkpedario(resultado.getInt("pkpedario"));
-                ped.setNome(resultado.getString("nome"));
-                ped.setEmail(resultado.getString("email"));
-                ped.setSenha("confidencial");
-                ped.setDataNasc(resultado.getDate("dataNasc"));
-                ped.setAtivo(resultado.getBoolean("ativo"));*/
+ped.setPkpedido(resultado.getInt("pkpedido"));
+        
+
+               
+                
 
 //adicionando o ped na lista
                 listaPedidos.add(ped);
@@ -78,7 +75,7 @@ public class PedidoController {
     
     
      public boolean deletarPedido(int id) {
-        String sql = "DELETE FROM tbpedario WHERE pkpedario = ?";
+        String sql = "DELETE FROM tbpedido WHERE pkpedido = ?";
 
         GerenciadorConexao gerenciador = new GerenciadorConexao();
         PreparedStatement comando = null;
