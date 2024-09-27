@@ -457,7 +457,7 @@ this.dispose();
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         
-        FrconUsuario a = new FrconUsuario  (null,rootPaneCheckingEnabled);
+        FrCarrinho a = new FrCarrinho  (null,rootPaneCheckingEnabled);
         this.dispose();
        
     }//GEN-LAST:event_jButton1MouseClicked
@@ -511,7 +511,7 @@ carregarUsuario();
     }//GEN-LAST:event_formWindowOpened
 
     private void jPanel81MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel81MouseClicked
-//cria um seletor de Arquivos
+        //cria um seletor de Arquivos
         JFileChooser arquivos = new JFileChooser();
 
         //define o titulo que aparecera na janela do explorador de arquivos
@@ -535,7 +535,7 @@ carregarUsuario();
             File arquivo = arquivos.getSelectedFile();
             
             //converte para icon
-            Icon icone =Utils.ConverterFileParaIcon(arquivo);
+            Icon icone = Utils.ConverterFileParaIcon(arquivo);
 
             //redimensiona para o tamanho que aparece na tela
             ImageIcon iconRed = Utils.RedirecionarIcon(icone,140,140);
