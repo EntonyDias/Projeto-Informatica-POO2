@@ -502,7 +502,7 @@ public Usuario usu;
     }//GEN-LAST:event_jMenu4ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        FrconUsuario a = new FrconUsuario(this, rootPaneCheckingEnabled);
+        FrCarrinho a = new FrCarrinho(this, rootPaneCheckingEnabled);
         a.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
@@ -512,7 +512,7 @@ public Usuario usu;
     }//GEN-LAST:event_jMenu5MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        FrconUsuario a = new FrconUsuario(this, rootPaneCheckingEnabled);
+        FrCarrinho a = new FrCarrinho(this, rootPaneCheckingEnabled);
         a.setVisible(true);
     }//GEN-LAST:event_jLabel2MouseClicked
 

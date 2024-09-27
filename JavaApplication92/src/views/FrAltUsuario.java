@@ -457,7 +457,7 @@ this.dispose();
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         
-        FrconUsuario a = new FrconUsuario  (null,rootPaneCheckingEnabled);
+        FrCarrinho a = new FrCarrinho  (null,rootPaneCheckingEnabled);
         this.dispose();
        
     }//GEN-LAST:event_jButton1MouseClicked
