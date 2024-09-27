@@ -12,10 +12,11 @@ import javax.swing.Icon;
  * @author S.lucas
  */
 public class Produto {
- private   int pkproduto;
-   private String	nome; 
-   private double	valor ;
-   private  Icon image; 
+
+    private int pkproduto;
+    private String nome;
+    private double valor;
+    private Icon image;
 
     public Produto() {
     }
@@ -58,5 +59,5 @@ public class Produto {
     public void setImage(Icon image) {
         this.image = image;
     }
-   
+
 }

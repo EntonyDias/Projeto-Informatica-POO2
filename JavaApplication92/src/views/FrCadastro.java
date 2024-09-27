@@ -469,7 +469,7 @@ this.dispose();
             File arquivo = arquivos.getSelectedFile();
             
             //converte para icon
-            Icon icone =Utils.ConverterFileParaIcon(arquivo);
+            Icon icone = Utils.ConverterFileParaIcon(arquivo);
 
             //redimensiona para o tamanho que aparece na tela
             ImageIcon iconRed = Utils.RedirecionarIcon(icone,140,140);
