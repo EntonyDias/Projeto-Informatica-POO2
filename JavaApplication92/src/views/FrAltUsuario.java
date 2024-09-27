@@ -597,12 +597,12 @@ public void gravar(){
    usu.setImage( lbFoto.getIcon());
    
    
-   if(controller.AlterarUsuario(usu)){
+   /*if(controller.AlterarUsuario(usu)){
        JOptionPane.showMessageDialog(null,"usuario : "+ usu.getNome() + "  foi alterado com suscesso!!");
         
    }else{
        JOptionPane.showMessageDialog(null,"erro ao alterar usuario");
-   }
+   }*/
    } 
     
     

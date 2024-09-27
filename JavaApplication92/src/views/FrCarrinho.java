@@ -251,7 +251,7 @@ public class FrCarrinho extends javax.swing.JDialog {
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-
+/*
 //pega o usuario que esta selecionado e se for diferente de -1 (-1 e igual  nada selecionado)
         if (grdUsuario.getSelectedRow() != -1) {
 
@@ -267,11 +267,11 @@ public class FrCarrinho extends javax.swing.JDialog {
 
             UsuarioController controller = new UsuarioController();
 
-            if (controller.deletarUsuario(pkusuario)) {
+            if (controller.deletarPedido(pkusuario)) {
                 JOptionPane.showMessageDialog(null, "o usuario " + nome + " foi excluido");
             }
             pesquisar();
-        }
+        }*/
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -283,7 +283,7 @@ public class FrCarrinho extends javax.swing.JDialog {
         new FrMain().setVisible(true);
     }//GEN-LAST:event_jButton2MouseClicked
     private void pesquisar() {
-
+/*
 //pega o modelo da grade com suas colunas
         DefaultTableModel modelo = (DefaultTableModel) grdUsuario.getModel();
 //cooloca 
@@ -292,10 +292,10 @@ public class FrCarrinho extends javax.swing.JDialog {
         UsuarioController controller = new UsuarioController();
 
        
-        List<Usuario> listaUsuarios = controller.listarUsuarios();
+     
 
         //loop para adicionar todos os usuarios encontrados
-        for (Usuario usu : listaUsuarios) {
+      /*  for (Usuario usu : listaUsuarios) {
 
             Object[] linha = {
                 usu.getPkusuario(),
@@ -305,8 +305,8 @@ public class FrCarrinho extends javax.swing.JDialog {
                 usu.ativoToString()
             };
             //coloca o Array com os atributos do usuario na lista
-            modelo.addRow(linha);
-        }
+            modelo.addRow(linha);*/
+        
 
     }
 
