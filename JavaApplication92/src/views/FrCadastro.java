@@ -412,6 +412,7 @@ public class FrCadastro extends javax.swing.JDialog {
 
     private void btnConfirmarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmarMouseClicked
         if (VerificarCampos() == true) {
+            
             JOptionPane.showMessageDialog(null, "conta criada");
             CriarUsuario();
         }
