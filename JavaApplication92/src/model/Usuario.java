@@ -9,7 +9,7 @@ public class Usuario {
 private int pkusuario;
 private String nome;
 private String senha;
-
+private String email;
 private boolean ativo;     
 private Icon Image; 
 
@@ -21,9 +21,18 @@ private Icon Image;
         this.nome = nome;
      
         this.senha = senha;
+        this.email = email;
         
         this.ativo = ativo;
         this.Image = Image;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
   
