@@ -16,39 +16,40 @@ import model.Pedido;
 public class PedidoController {
     
     public List<Pedido> listarpedidos() {
-        String sql = "SELECT *  from tbpedido ";
+        String sql = "select ped.pkpedido,pro.nome,pro.valor "
+                + "from tbpedido ped "
+                + "inner join tbproduto pro "
+                + "on ped.fkproduto=pro.pkproduto "
+                + "where ped.fkusuario=?;";
 
         List<Pedido> listaPedidos = new ArrayList<>();
 
 //cria um gerenciador de conexão
         GerenciadorConexao gerenciador = new GerenciadorConexao();
-        //criar as variaveis vazias antes do try para preenchelas depois
-
-        //ele é usado para complementar a pesquisa caso use uma variavel (os "?")
         PreparedStatement comando = null;
-
-        //ele e o resultado do comando sql usado so quando precisa pegar algo do resultado como um select
         ResultSet resultado = null;
 
         try {
-            //prepara a String sql e tranforma em um comando sql pra o uso, tambem é usado para alterar  o comando quando ha variaveis
+            
             comando = gerenciador.prepararComando(sql);
 
-            //atribuindo coisas nas variaveis
-
-//isso vai executar o comando e guardar na variavel resultado
             resultado = comando.executeQuery();
-            //resultado.next() vai passar para a proxima linha no resultado do sql e ele tambem retorna true se tiver outra linha para ser passada e false se nao tiver
+          
             while (resultado.next()) {
 
-                //cria um pedidopara preche-lo
+              
                 Pedido ped = new Pedido();
 
-//adicionando os atributos para o pedario
+
+ped.setPkpedido(resultado.getInt("pkpedido"));
 ped.setPkpedido(resultado.getInt("pkpedido"));
         
 
-               
+     /*           private int pkpedido;
+    private int fkusuario;
+    private int fkproduto;
+    private String nomeP;
+    private double valorP;*/
                 
 
 //adicionando o ped na lista
