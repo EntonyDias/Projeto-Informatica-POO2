@@ -22,7 +22,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import model.Usuario;
 
-import static sun.security.krb5.Confounder.bytes;
+
 import utils.Utils;
 
 /**
@@ -138,7 +138,7 @@ public class UsuarioController {
     }
 
     public Usuario buscaEmail(String email) {
-        String sql = "SELECT pkusuario, nome, email, senha, datanasc, ativo , image from tbusuario where email = ?";
+        String sql = "SELECT pkusuario, nome, email, senha, ativo , image from tbusuario where email = ?";
 
         GerenciadorConexao gerenciador = new GerenciadorConexao();
         PreparedStatement comando = null;
@@ -156,7 +156,7 @@ public class UsuarioController {
                 usu.setNome(resultado.getString("nome"));
                 usu.setEmail(resultado.getString("email"));
                 usu.setSenha(resultado.getString("senha"));
-                usu.setDataNasc(resultado.getDate("dataNasc"));
+                
                 usu.setAtivo(resultado.getBoolean("ativo"));
 
                 byte[] bytes = resultado.getBytes("image");
