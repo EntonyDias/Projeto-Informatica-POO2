@@ -247,7 +247,7 @@ public class FrCarrinho extends javax.swing.JDialog {
         ImageIcon Icon = new ImageIcon(caminhoImagem);
 
         this.setIconImage(Icon.getImage());
-         setTitle("Sistema de Gerenciamento de Usuarios - Consultar Usuarios");
+         setTitle("Sistema de Carrinho do Usuario - Carrinho Pessoal");
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
