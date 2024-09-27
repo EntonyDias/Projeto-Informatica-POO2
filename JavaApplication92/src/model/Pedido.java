@@ -27,9 +27,9 @@ public class Pedido {
     public int getPkpedido() {
         return pkpedido;
     }
-
-    public void setPkpedido(int a) {
-        this.pkpedido = a;
+    
+    public void setPkpedido(int pkpedido) {
+        this.pkpedido = pkpedido;
     }
 
     public int getFkusuario() {
@@ -47,10 +47,4 @@ public class Pedido {
     public void setFkproduto(int fkproduto) {
         this.fkproduto = fkproduto;
     }
-
-
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-
 }
