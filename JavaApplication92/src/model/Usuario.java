@@ -10,7 +10,7 @@ private int pkusuario;
 private String nome;
 private String email;
 private String senha;
-private Date dataNasc;        
+
 private boolean ativo;     
 private Icon Image; 
 
@@ -22,7 +22,7 @@ private Icon Image;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-        this.dataNasc = dataNasc;
+        
         this.ativo = ativo;
         this.Image = Image;
     }
@@ -71,13 +71,7 @@ private Icon Image;
         this.senha = senha;
     }
 
-    public Date getDataNasc() {
-        return dataNasc;
-    }
-
-    public void setDataNasc(Date dataNasc) {
-        this.dataNasc = dataNasc;
-    }
+    
 
     public boolean isAtivo() {
         return ativo;
